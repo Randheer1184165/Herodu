@@ -157,6 +157,24 @@ global $connection;
  }
 
 
+function is_admin($username =''){
+
+global connection;
+
+$query = "SELECT user_role FROM users WHERE ='$username'";
+
+$result = mysqli_query($connection, $query);
+
+confirmQuery($result);
+$row = mysqli_fetch_array($result);
+
+if($raw['user_role'] == 'admin'){
+  return true;
+}else{
+  return false;
+}
+
+}
 
 
 
