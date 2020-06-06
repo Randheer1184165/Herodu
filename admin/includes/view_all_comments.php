@@ -146,7 +146,7 @@ while ($row = mysqli_fetch_assoc($select_post_id_query)) {
 
 echo "<td>$comment_date </td>";
 echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
-echo "<td><a href='comments.php?Unapprove=$comment_id'>Unapprove</a></td>";
+echo "<td><a href='comments.php?unapprove=$comment_id'>Unapprove</a></td>";
 echo "<td><a onClick=\"javascript: return confirm('Are you you want to delete'); \" href='comments.php?delete=$comment_id'>Delete</a></td>";
 echo "</tr>";
 
@@ -171,7 +171,7 @@ echo "</tr>";
           if(isset($_GET[''])){
      $the_comment_id =$_GET['approve'];
 
-     $query ="UPDATE heroku_597cf2e5c9cb274.comments SET comment_status ='approve' where comment_id=$the_comment_id ";
+     $query ="UPDATE heroku_597cf2e5c9cb274.comments SET comment_status ='approve' WHERE comment_id=$the_comment_id ";
      $approve_comment_query=mysqli_query($connection, $query);
     header("location: comments.php");
 
@@ -180,9 +180,9 @@ echo "</tr>";
 
 
           if(isset($_GET[''])){
-     $the_comment_id =$_GET['Unapprove'];
+     $the_comment_id =$_GET['unapprove'];
 
-     $query ="UPDATE heroku_597cf2e5c9cb274.comments SET comment_status ='Unapprove' where comment_id=$the_comment_id ";
+     $query ="UPDATE heroku_597cf2e5c9cb274.comments SET comment_status ='unapprove' WHERE comment_id=$the_comment_id ";
      $Unapprove_comment_query=mysqli_query($connection, $query);
     header("location: comments.php");
 
