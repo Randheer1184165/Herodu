@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 
 $db['db_host']="us-cdbr-east-05.cleardb.net:3306";
