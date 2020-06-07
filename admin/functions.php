@@ -161,7 +161,7 @@ function is_admin($username =''){
 
 global $connection;
 
-$query = "SELECT user_role FROM users WHERE username='$username'";
+$query = "SELECT user_role FROM heroku_597cf2e5c9cb274.users WHERE username='$username'";
 
 $result = mysqli_query($connection, $query);
 
