@@ -159,9 +159,9 @@ global $connection;
 
 function is_admin($username =''){
 
-global connection;
+global $connection;
 
-$query = "SELECT user_role FROM users WHERE ='$username'";
+$query = "SELECT user_role FROM users WHERE username='$username'";
 
 $result = mysqli_query($connection, $query);
 
