@@ -2,6 +2,15 @@
 <?php include "functions.php"; ?>
 <?php ob_start(); ?>
 
+<?php
+if (!is_admin($_SESSION['username'])) {
+  
+   header("Location: index.php");
+
+
+} 
+?>
+
     <div id="wrapper">
       
       <?php include "includes/admin_navigation.php";?>
